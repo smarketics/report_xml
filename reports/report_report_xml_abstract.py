@@ -103,7 +103,7 @@ class ReportXmlAbstract(models.AbstractModel):
                 # check content
                 etree.fromstring(content, parser)
             except etree.XMLSyntaxError as error:
-                raise ValidationError(error.msg) from error
+                raise ValidationError(error.msg)
         return True
 
     @api.model
